@@ -23,7 +23,7 @@ jobs:
         uses: Azure/webapps-deploy@v3.0.1
         with:
           # Name of the Azure Web App
-          app-name: 'fullstackharwin'
+          app-name: 'testharwin'
           images: 'harwincu/fullstackharwin:v1'
           resource-group-name: 'Lab_fullstack'
 
