@@ -16,7 +16,7 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag harwincu/fullstackharwin:v6
       - name: login registry
-        run: docker login -u harwin6@hotmail.com -p "Tecnologia2024**"
+        run: docker login -u ${{ secrets.USER }} -p ${{ secrets.PASSW }}
       - name: push image
         run: docker image push harwincu/fullstackharwin:v6
 
