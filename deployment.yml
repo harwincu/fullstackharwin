@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fullstackharwin
+  namespace: production
+  labels:
+    app: fullstackharwin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fullstackharwin
+  template:
+    metadata:
+      labels:
+        app: fullstackharwin
+    spec:
+      containers:
+      - name: fullstackharwin
+        image: harwincu/fullstackharwin:v1
+        ports:
+        - containerPort: 3000
+        #env:
+       # - name: MY_SECRET
+        #    sourcefrom: 
+         #     secret:
+          #      -name: mysecret
+           #     -key: password
