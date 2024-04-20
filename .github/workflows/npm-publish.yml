@@ -14,11 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag harwincu/fullstackharwin:v5
+        run: docker build . --file Dockerfile --tag harwincu/fullstackharwin:v6
       - name: login registry
         run: docker login -u harwin6@hotmail.com -p "Tecnologia2024**"
       - name: push image
-        run: docker image push harwincu/fullstackharwin:v5
+        run: docker image push harwincu/fullstackharwin:v6
 
 
       - name: Azure login
@@ -32,8 +32,8 @@ jobs:
         uses: Azure/webapps-deploy@v3.0.1
         with:
           # Name of the Azure Web App
-          app-name: 'labharwin'
-          images: 'harwincu/fullstackharwin:v5'
+          app-name: 'lastharwin'
+          images: 'harwincu/fullstackharwin:v6'
           resource-group-name: 'Lab_fullstack'
 
           
